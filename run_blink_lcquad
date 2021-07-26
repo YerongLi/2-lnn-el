@@ -1,0 +1,10 @@
+# cd lnn-el/
+git stash; git pull
+# # /content/lnn-el/examples/entity/run_lnn_el_ensemble.py
+PYTHONPATH=. python3 -u ./examples/entity/run_lnn_el_ensemble.py --dataset_name lcquad \
+--experiment_name exp_lnn_lcquad_ensemble \
+--model_name NA \
+--num_epoch 40 \
+--learning_rate 0.0001 \
+--use_type \
+--topk 5 | tee log_blink

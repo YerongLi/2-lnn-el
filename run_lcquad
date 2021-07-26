@@ -1,0 +1,9 @@
+%%bash
+# /content/lnn-el/examples/entity/run_lnn_el_gold.py
+cd lnn-el/
+git stash; git pull
+PYTHONPATH=. time python3 -u examples/entity/run_lnn_el_gold.py \
+--dataset_name lcquad \
+--model_name pure_ctx \
+--experiment_name exp_lnn_lcquad_pure_ctx_type --num_epoch 4000 \
+--learning_rate 0.000001 | tee log
